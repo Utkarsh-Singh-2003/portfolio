@@ -1,0 +1,436 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('bg1.png'); /* Your background image */
+    background-color: black;  /* Fallback for background color */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white; /* Set text color to white for contrast */
+    scroll-behavior: smooth;
+}
+
+/* Section-specific Text Color */
+section h1, section h2 {
+    color: #fff; /* Heading text color (white) */
+}
+
+section p, section ul, section li {
+    color: #ccc; /* Lighter gray text color for readability */
+}
+
+/* Header Styles */
+header {
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1.5rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+/* Section Styles */
+section {
+    padding: 3rem;
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+#about p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: black;
+}
+
+/* Project Section */
+.project {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;  /* Center the content, including the button */
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    color: #4A90E2;
+}
+
+/* Floating Window Styles */
+.floating-window {
+    width: 1000px; /* Set fixed width */
+    height: 400px; /* Set fixed height */
+    background-size: cover;  /* Ensure the image covers the whole area */
+    background-position: center;  /* Centers the image */
+    background-repeat: no-repeat;  /* Prevents the image from repeating */
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: white;  /* Default text color */
+    overflow: hidden;  /* Prevents content from overflowing */
+    position: relative; /* Required for absolute positioning of the button */
+}
+
+/* For Landing Page Project */
+.landing-page-project {
+    background-image: url('https://images.shiksha.com/mediadata/images/articles/1630614983php5LcRjr.png');
+}
+
+/* For To-Do List Project */
+.todo-list-project {
+    background-image: url('https://images.prismic.io//intuzwebsite/d9daef05-a416-4e84-b0f8-2d5e2e3b58d8_A+Comprehensive+Guide+to+Building+an+AI+Chatbot%402x.png?w=2400&q=80&auto=format,compress&fm=png8');
+}
+
+/* For Chatbot Project */
+.chatbot-project {
+    background-image: url('path-to-chatbot-image.jpg');
+}
+
+
+/* Ensure the text is readable */
+.floating-window h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #FFD700; /* You can change the color to fit your theme */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow to the text */
+    margin-bottom: 1rem;
+}
+
+.floating-window p {
+    font-size: 1rem;
+    color: white;  /* Text color */
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.project-img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.project-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Visit Button Styles */
+.visit-button {
+    position: absolute;
+    bottom: 15px; /* Position the button 15px from the bottom */
+    left: 50%; /* Center the button horizontally */
+    transform: translateX(-50%); /* Adjust to exactly center the button */
+    padding: 10px 20px;
+    background-color: #FFD700; /* Button color */
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.visit-button:hover {
+    background-color: #ffcc00; /* Change color on hover */
+}
+
+/* Hover effect to lift the window */
+.floating-window:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+form input, form textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #4A90E2;
+}
+
+form button {
+    padding: 0.8rem;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #357ABD;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #4A90E2;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 3rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Landing Page Images (moderate size) */
+.image-gallery.landing-page img {
+    width: 300px;  /* Set width to a more moderate size */
+    height: 800px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.image-gallery.landing-page img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.image-gallery.to-do-list {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin-top: 2rem;
+    overflow-x: scroll;      /* Horizontal scroll */
+    scroll-snap-type: x mandatory;  /* Smooth scroll snapping */
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    width: 100%;
+    position: relative;
+}
+
+.image-gallery.to-do-list img {
+    width: 200px;           /* Set width of images */
+    height: auto;           /* Maintain aspect ratio */
+    border-radius: 10px;    /* Round corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    flex-shrink: 0;         /* Prevent images from shrinking */
+}
+
+/* Hover effect */
+.image-gallery.to-do-list img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.home{
+    display: flex;
+    /* background: url("./images/banner.jpg") no-repeat center; */
+    height: 100vh;
+    color: #fff;
+    min-height: 150px;
+    font-family: 'ubuntu' , sans-serif;
+}
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: rgb(220, 207, 20);
+    font-weight: 500;
+}
+.home .home-content a{
+    display: inline-block;
+    background-color: rgb(220, 207, 20);
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(220, 207, 20);
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: rgb(220, 207, 20);
+    background: none;
+}
+section{
+    padding: 100px 0;
+}
+.about {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.about .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'ubuntu',sans-serif;
+}
+.about .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+.about .title::after{
+    content: "Just to know me";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(220, 207, 20);
+    padding: 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+.about .about-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+}
+.about .about-text .column-left {
+    width: 50%;
+}
+.about .about-text .column-right {
+    width: 45%;
+    display: flex;
+    justify-content: flex-end; /* Push the image to the right */
+}
+
+.about .about-text .column-right img {
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.about .about-text .column-right{
+    width: 45%;
+}
+
+.about .about-text .column-right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-text .column-right .text span{
+    color:rgb(28, 4, 126);
+}
+
+.about .about-text .column-right p{
+    text-align: justify;
+}
+.about .about-text .column-right a{
+    display: inline-block;
+    background-color: rgb(220, 207, 20);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(220, 207, 20);
+    transition: all 0.3s ease;   
+}
+.about .about-text .column-right a:hover{
+    color: rgb(220, 207, 20);
+    background: none;
+}
+/* services section */
+section{
+    padding: 100px 0;
+}
